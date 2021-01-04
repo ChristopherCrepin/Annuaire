@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Annuaire</title>
+        <!DOCTYPE html>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <h1>Annuaire</h1>
+        <fieldset>
+            <legend> <!-- tabs -->
+                <div class="tab">
+                    <button class="tablinks" onclick="clickHandle(event, 'Recherche')" id="defaultOpen">Recherche</button>
+                    <button class="tablinks" onclick="clickHandle(event, 'Enregistrement')">Enregistrement</button>
+                </div>
+            </legend>
+            <form method="POST"> <!-- formulaire -->
+                <div id="Enregistrement" class="tabcontent"> <!-- enregistrement -->
+                    <p>
+                        <!-- genre -->
+                        <input type="radio" name="genre" value="M" id="genre" required/> <label for="M">M</label>
+                        <input type="radio" name="genre" value="Mme" id="genre" required/> <label for="Mme">Mme</label>
+                        <input type="radio" name="genre" value="Mlle" id="genre" required/> <label for="Mlle">Mlle</label>
+                        <input type="radio" name="genre" value="Autre" id="genre" required/> <label for="Autre">Autre</label>
+                    </p>
+                    <p>
+                        <!-- nom et prénom -->
+                        <input size="17" type="text" name="nom" id="nom" placeholder="Nom" maxlength="20" pattern="[A-Z]{1}[a-zA-ZÀ-ÿ/-]{2,19}" required>
+                        <input size="17" type="text" name="prenom" id="prenom" placeholder="Prénom" maxlength="20" pattern="[A-Z]{1}[a-zA-ZÀ-ÿ/-]{2,19}" required>
+                    </p>
+                    <p>
+                        <!-- pays -->
+                        <select name="pays" id="pays" required>
+                        <option value=Belgique>+32</option>
+                        <option value=France>+33</option>
+                        <option value=Angleterre>+44</option>
+                        <option value=Allemagne>+49</option>
+                        </select>
+                        <!-- téléphone -->
+                        <input size="31" type="tel" id="phone" name="phone" pattern="[0-9]{1}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" placeholder="X XX XX XX XX (téléphone)" required>
+                    </p>
+                    <p>
+                        <!-- validation -->
+                        <button id="submit" type="submit">Envoyer</button>
+                    </p>
+                </div> 
+                <div id="Recherche" class="tabcontent"> <!-- recherche -->
+                    <div class="box">
+                        <div>
+                            <p>
+                                <input type="text" id="inputFiltre" name="inputFiltre" placeholder="#TAG"/>
+                                <button type="submit" onclick="actualise()">Rechercher</button>
+                            </p>
+                            <div id="addFilter">
+
+                            </div>
+                        </div>
+                        <div>
+                            <p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>Prénom</td>
+                                            <td>Nom</td>
+                                            <td>Sexe</td>
+                                            <td>Pays</td>
+                                            <td>Numéro</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody id='tableau'>
+                                    </tbody>
+                                </table>
+                            </p>
+                        </div>
+                    </div>
+                </div>    
+            </form>
+        </fieldset>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html> 

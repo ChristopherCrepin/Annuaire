@@ -1,0 +1,82 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    color:#1b2631;
+    width:1200px;
+    padding:40px;
+    margin:auto;
+}
+
+fieldset{
+    border:2px solid #2e4053;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;	
+    border-radius:8px;	
+}
+
+input{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    border:2px solid #2e4053;
+    width: 200px;
+    height:30px
+}
+
+select{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    border:2px solid #2e4053;
+    width: 200px;
+    height:30px
+}
+
+
+button{
+    color:black;
+    border: 2px solid #2e4053;
+    background-color:white;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    width: 200px;
+    height:30px
+}
+
+#genre{
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: grey;
+}
+
+.tab button.active {
+    background-color:grey;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+}
+
+table,
+td {
+    border: 2px solid #2e4053;
+    border-radius: 3px;
+    width:500px;
+}
+
+thead{
+    text-align:center;
+    background-color:#aeb6bf;
+}
+
+tbody td {
+    text-align: center;
+}
+
+#addFilter span
+{
+    border: solid 1px #ebedef;
+    background-color: #ebedef;
+    border-radius: 5px;
+}
